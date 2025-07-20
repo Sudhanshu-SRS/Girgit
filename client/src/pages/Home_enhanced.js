@@ -80,13 +80,11 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">
-          <h1>AI-Powered Healthcare & Educational Research Platform</h1>
+          <h1>Generative AI Applications in Healthcare and Education</h1>
           <p>
-            Advancing medical innovation and educational excellence through
-            cutting-edge artificial intelligence research. Explore comprehensive
-            studies on AI applications in diagnostic medicine, personalized
-            treatment, adaptive learning systems, and intelligent educational
-            content generation.
+            Exploring how AI is transforming patient care, medical research,
+            personalized learning, and educational content creation through
+            comprehensive research and case studies.
           </p>
           <div className="hero-buttons">
             <Link to="/research" className="btn-primary">
@@ -102,40 +100,38 @@ const Home = () => {
       {/* Research Abstract */}
       <section className="abstract-section">
         <div className="container">
-          <h2>Research Overview</h2>
+          <h2>Research Abstract</h2>
           <div className="abstract-content">
             <p>
-              Our research platform represents a groundbreaking initiative in
-              artificial intelligence applications for healthcare and education.
-              We investigate how AI technologies are revolutionizing medical
-              diagnostics, enabling precision medicine, accelerating drug
-              discovery, and transforming patient care delivery systems across
-              global healthcare networks.
+              Generative AI is revolutionizing healthcare and education by
+              enabling unprecedented personalization, efficiency, and
+              innovation. In healthcare, AI assists in diagnostic imaging, drug
+              discovery, personalized treatment plans, and medical
+              documentation, significantly improving patient outcomes and
+              reducing healthcare costs.
             </p>
             <p>
-              In the educational domain, our studies focus on AI-driven
-              personalized learning environments, intelligent tutoring systems,
-              automated content generation, and adaptive assessment frameworks
-              that enhance learning outcomes while addressing individual student
-              needs and learning styles.
+              In education, AI-powered tools create adaptive learning
+              experiences, generate educational content, provide intelligent
+              tutoring, and offer real-time feedback to students. This
+              technology makes quality education more accessible and effective
+              for learners worldwide.
             </p>
             <p>
-              This comprehensive research initiative combines quantitative
-              analysis, qualitative studies, and real-world case studies to
-              provide evidence-based insights for healthcare professionals,
-              educators, researchers, and technology developers worldwide.
+              This comprehensive study analyzes the implementation, benefits,
+              challenges, and ethical considerations of generative AI across
+              these critical sectors, providing insights for researchers,
+              practitioners, and policymakers.
             </p>
             <div className="author-info">
-              <strong>Lead Researcher:</strong> Dr. Gargee Purwar, MCA
+              <strong>Principal Investigator:</strong> Dr. Gargee Purwar
               <br />
-              <strong>Research Institution:</strong> Advanced AI Research
-              Institute
+              <strong>Research Program:</strong> MCA 1st Year, Semester II
               <br />
-              <strong>Specialization:</strong> Medical AI, Educational
-              Technology, Machine Learning
+              <strong>Institution:</strong> Advanced AI Research Institute
               <br />
-              <strong>Research Focus:</strong> AI Ethics, Healthcare Innovation,
-              Adaptive Learning Systems
+              <strong>Keywords:</strong> Generative AI, Healthcare Technology,
+              Educational Innovation, AI Ethics, Machine Learning Applications
             </div>
           </div>
         </div>

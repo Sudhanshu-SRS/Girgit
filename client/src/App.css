@@ -1,5 +1,6 @@
+/* Modern App Styles */
 .App {
-  text-align: left;
+  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,25 +8,52 @@
 
 .main-content {
   flex: 1;
-  padding-top: 70px; /* Account for fixed navbar */
+  padding-top: 120px; /* Increase from current value to accommodate navbar */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  min-height: calc(100vh - 120px);
 }
 
-/* Dark mode styles */
+/* Add this to ensure all pages have proper spacing */
+.page-wrapper {
+  padding-top: 40px;
+  min-height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding-top: 20px;
+  }
+
+  .main-content {
+    padding-top: 90px; /* Reduce for mobile navbar */
+  }
+}
+
+/* Enhanced Dark mode styles */
 .dark-mode {
-  background-color: #1a1a1a;
-  color: #f0f0f0;
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  color: #f7fafc;
+}
+
+.dark-mode .main-content {
+  background: rgba(26, 32, 44, 0.95);
+  color: #f7fafc;
 }
 
 .dark-mode .navbar {
-  background-color: #2d2d2d;
-  border-bottom: 1px solid #404040;
+  background: rgba(45, 55, 72, 0.95);
+  border-bottom: 1px solid #4a5568;
+  backdrop-filter: blur(10px);
 }
 
 .dark-mode .feature-card,
 .dark-mode .stat-card {
-  background-color: #2d2d2d;
-  color: #f0f0f0;
-  border: 1px solid #404040;
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  color: #f7fafc;
+  border: 1px solid #718096;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode .hero-section {
@@ -33,62 +61,218 @@
 }
 
 .dark-mode .btn-primary {
-  background-color: #4299e1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .dark-mode .btn-primary:hover {
-  background-color: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
 }
 
-/* Loading animations */
+/* Modern Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Enhanced Loading animations */
 .loading-spinner {
-  border: 4px solid #f3f3f3;
+  border: 4px solid rgba(102, 126, 234, 0.1);
   border-top: 4px solid #667eea;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   animation: spin 1s linear infinite;
   margin: 20px auto;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
 }
 
 /* Card animations */
 .card-enter {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px) scale(0.95);
 }
 
 .card-enter-active {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 300ms, transform 300ms;
+  transform: translateY(0) scale(1);
+  transition: all 0.5s ease-out;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.dark-mode .glass {
+  background: rgba(45, 55, 72, 0.25);
+  border: 1px solid rgba(74, 85, 104, 0.18);
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(247, 250, 252, 0.1);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 6px;
+  border: 2px solid rgba(247, 250, 252, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Text animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .main-content {
-    padding-top: 60px;
+    padding-top: 90px; /* Reduce for mobile navbar */
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+/* Modern shadows */
+.shadow-lg {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+.shadow-xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

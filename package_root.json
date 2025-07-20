@@ -1,0 +1,32 @@
+{
+  "name": "girgit-ai-research-platform",
+  "version": "1.0.0",
+  "description": "Comprehensive AI research platform for healthcare and education",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "seed": "cd server && npm run seed"
+  },
+  "keywords": [
+    "AI",
+    "healthcare",
+    "education",
+    "research",
+    "MERN",
+    "machine learning"
+  ],
+  "author": "Sudhanshu Sakhare",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sudhanshu-SRS/Girgit.git"
+  }
+}

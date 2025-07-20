@@ -1,0 +1,234 @@
+.home {
+  padding-bottom: 60px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 12px 24px;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #667eea;
+}
+
+.abstract-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.abstract-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.abstract-content {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.abstract-content p {
+  margin-bottom: 25px;
+}
+
+.author-info {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  margin-top: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stats-section {
+  padding: 80px 0;
+}
+
+.stats-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.features-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.features-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.findings-section {
+  padding: 80px 0;
+}
+
+.findings-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.findings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.finding-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.finding-card:hover {
+  transform: translateY(-5px);
+}
+
+.finding-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.finding-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.finding-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.finding-card li:last-child {
+  border-bottom: none;
+}
+
+.benefits h3 {
+  color: #28a745;
+}
+
+.challenges h3 {
+  color: #ffc107;
+}
+
+.future h3 {
+  color: #6f42c1;
+}
+
+/* Dark mode styles */
+.dark-mode .abstract-section,
+.dark-mode .features-section {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .abstract-section h2,
+.dark-mode .features-section h2,
+.dark-mode .findings-section h2,
+.dark-mode .stats-section h2 {
+  color: #f0f0f0;
+}
+
+.dark-mode .abstract-content {
+  color: #ccc;
+}
+
+.dark-mode .author-info,
+.dark-mode .finding-card {
+  background-color: #2d2d2d;
+  color: #f0f0f0;
+  border-color: #404040;
+}
+
+.dark-mode .finding-card li {
+  color: #ccc;
+  border-bottom-color: #404040;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+  
+  .abstract-section,
+  .features-section,
+  .findings-section,
+  .stats-section {
+    padding: 60px 0;
+  }
+  
+  .abstract-section h2,
+  .features-section h2,
+  .findings-section h2,
+  .stats-section h2 {
+    font-size: 2rem;
+  }
+  
+  .findings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
